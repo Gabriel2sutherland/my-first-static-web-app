@@ -1,25 +1,833 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-CA" class="no-js">
+	<head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Vanilla JavaScript App</title>
-</head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-87978297-2"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+ 		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
 
-<body>
-    <main>
-    <h1>Vanilla JavaScript App</h1>
-    <p>Loading content from the API: <b id="name">...</b></p>
-    </main>
+ 		gtag('config', 'UA-87978297-2');
+		</script>
 
-    <script>
-    (async function() {
-        const { text } = await( await fetch(`/api/message`)).json();
-        document.querySelector('#name').textContent = text;
-    }())
+
+		<meta charset="UTF-8">
+		
+
+		<!-- <link href="//www.google-analytics.com" rel="dns-prefetch"> -->
+        <link href="http://amacon.com/wp-content/themes/amacon/img/icons/favicon.ico" rel="shortcut icon">
+        <!-- <link href="/img/icons/touch.png" rel="apple-touch-icon-precomposed"> -->
+        <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet"> -->
+
+		<meta name="facebook-domain-verification" content="c8qy088u0x9z1dyl84xp2pv5s7pawi" />
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Live Well Work Well">
+		<meta name="google-site-verification" content="S5-aYg8736Fhp2gpvLC2WIdRVdYM5jK9XafjE8MkAmY" />
+		<meta name='robots' content='max-image-preview:large' />
+
+<!-- This site is optimized with the Yoast SEO Premium plugin v13.0 - https://yoast.com/wordpress/plugins/seo/ -->
+<title>Amacon | Real Estate Development &amp; Construction</title>
+<meta name="description" content="Amacon is one of Canada’s most influential real estate development and construction firms, with over 300 residential and commercial properties."/>
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<link rel="canonical" href="http://amacon.com/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Amacon | Real Estate Development &amp; Construction" />
+<meta property="og:description" content="Amacon is one of Canada’s most influential real estate development and construction firms, with over 300 residential and commercial properties." />
+<meta property="og:url" content="http://amacon.com/" />
+<meta property="og:site_name" content="Amacon" />
+<meta property="og:image" content="http://amacon.com/wp-content/uploads/2019/07/Amacon_LiveWorkWell_wREG_RGB-700x292.jpg" />
+<meta property="og:image:width" content="700" />
+<meta property="og:image:height" content="292" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Amacon is one of Canada’s most influential real estate development and construction firms, with over 300 residential and commercial properties." />
+<meta name="twitter:title" content="Amacon | Real Estate Development &amp; Construction" />
+<meta name="twitter:site" content="@AmaconLiveWell" />
+<meta name="twitter:image" content="http://amacon.com/wp-content/uploads/2019/07/Amacon_LiveWorkWell_wREG_RGB.jpg" />
+<meta name="twitter:creator" content="@AmaconLiveWell" />
+<meta name="google-site-verification" content="S5-aYg8736Fhp2gpvLC2WIdRVdYM5jK9XafjE8MkAmY" />
+<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"http://amacon.com/#organization","name":"Amacon","url":"http://amacon.com/","sameAs":["https://www.facebook.com/amaconliveworkwell/","https://www.instagram.com/amaconlivewell/","https://www.linkedin.com/company/amacon/","https://twitter.com/AmaconLiveWell"],"logo":{"@type":"ImageObject","@id":"http://amacon.com/#logo","url":"http://amacon.com/wp-content/uploads/2019/07/Amacon_LiveWorkWell_wREG_RGB.jpg","width":2127,"height":887,"caption":"Amacon"},"image":{"@id":"http://amacon.com/#logo"}},{"@type":"WebSite","@id":"http://amacon.com/#website","url":"http://amacon.com/","name":"Amacon","description":"Live Well Work Well","publisher":{"@id":"http://amacon.com/#organization"},"potentialAction":{"@type":"SearchAction","target":"http://amacon.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"http://amacon.com/#webpage","url":"http://amacon.com/","inLanguage":"en-CA","name":"Amacon | Real Estate Development &amp; Construction","isPartOf":{"@id":"http://amacon.com/#website"},"about":{"@id":"http://amacon.com/#organization"},"datePublished":"2017-02-06T22:57:38+00:00","dateModified":"2022-05-26T19:57:47+00:00","description":"Amacon is one of Canada\u2019s most influential real estate development and construction firms, with over 300 residential and commercial properties."}]}</script>
+<!-- / Yoast SEO Premium plugin. -->
+
+<link rel='dns-prefetch' href='//unpkg.com' />
+<link rel='dns-prefetch' href='//maxcdn.bootstrapcdn.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/amacon.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.4"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='http://amacon.com/wp-includes/css/dist/block-library/style.min.css?ver=5.8.4' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://amacon.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.4.2' media='all' />
+<link rel='stylesheet' id='fontAwesome-css'  href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css?ver=5.8.4' media='all' />
+<link rel='stylesheet' id='bxsliderStyle-css'  href='http://amacon.com/wp-content/themes/amacon/css/jquery.bxslider.css?ver=1.0' media='all' />
+<link rel='stylesheet' id='animate-css'  href='http://amacon.com/wp-content/themes/amacon/css/animate.css?ver=1.0' media='all' />
+<link rel='stylesheet' id='bootstrapStyle-css'  href='http://amacon.com/wp-content/themes/amacon/css/bootstrap.min.css?ver=1.0' media='all' />
+<link rel='stylesheet' id='fonts-css'  href='http://amacon.com/wp-content/themes/amacon/css/custom-fonts.css?ver=1.0' media='all' />
+<link rel='stylesheet' id='flexSlider-css'  href='http://amacon.com/wp-content/themes/amacon/css/flexslider.css?ver=1.0' media='all' />
+<link rel='stylesheet' id='slider-css'  href='http://amacon.com/wp-content/themes/amacon/css/skdslider.css?ver=1.0' media='all' />
+<link rel='stylesheet' id='Style-css'  href='http://amacon.com/wp-content/themes/amacon/css/style.css?ver=1.0' media='all' />
+<link rel='stylesheet' id='MainStyle-css'  href='http://amacon.com/wp-content/themes/amacon/css/main.css?ver=2.1' media='all' />
+<link rel='stylesheet' id='select2Style-css'  href='http://amacon.com/wp-content/themes/amacon/css/select2.min.css?ver=1.0' media='all' />
+<link rel='stylesheet' id='elementor-icons-css'  href='http://amacon.com/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.12.0' media='all' />
+<link rel='stylesheet' id='elementor-frontend-legacy-css'  href='http://amacon.com/wp-content/plugins/elementor/assets/css/frontend-legacy.min.css?ver=3.4.4' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css'  href='http://amacon.com/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.4.4' media='all' />
+<style id='elementor-frontend-inline-css' type='text/css'>
+@font-face{font-family:eicons;src:url(http://amacon.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0);src:url(http://amacon.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0#iefix) format("embedded-opentype"),url(http://amacon.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2?5.10.0) format("woff2"),url(http://amacon.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff?5.10.0) format("woff"),url(http://amacon.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf?5.10.0) format("truetype"),url(http://amacon.com/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.svg?5.10.0#eicon) format("svg");font-weight:400;font-style:normal}
+</style>
+<link rel='stylesheet' id='elementor-post-2627-css'  href='http://amacon.com/wp-content/uploads/elementor/css/post-2627.css?ver=1633372921' media='all' />
+<link rel='stylesheet' id='font-awesome-5-all-css'  href='http://amacon.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=3.4.4' media='all' />
+<link rel='stylesheet' id='font-awesome-4-shim-css'  href='http://amacon.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=3.4.4' media='all' />
+<link rel='stylesheet' id='nextgen_widgets_style-css'  href='http://amacon.com/wp-content/plugins/nextgen-gallery/products/photocrati_nextgen/modules/widget/static/widgets.css?ver=3.17' media='all' />
+<link rel='stylesheet' id='nextgen_basic_thumbnails_style-css'  href='http://amacon.com/wp-content/plugins/nextgen-gallery/products/photocrati_nextgen/modules/nextgen_basic_gallery/static/thumbnails/nextgen_basic_thumbnails.css?ver=3.17' media='all' />
+<link rel='stylesheet' id='nextgen_basic_slideshow_style-css'  href='http://amacon.com/wp-content/plugins/nextgen-gallery/products/photocrati_nextgen/modules/nextgen_basic_gallery/static/slideshow/ngg_basic_slideshow.css?ver=3.17' media='all' />
+<link rel='stylesheet' id='wp-my-instagram-css'  href='http://amacon.com/wp-content/plugins/wp-my-instagram/css/style.css?ver=1.0' media='all' />
+<link rel='stylesheet' id='google-fonts-1-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=5.8.4' media='all' />
+<script type='text/javascript' src='http://amacon.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
+<script type='text/javascript' src='http://amacon.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='http://amacon.com/wp-content/themes/amacon/js/bootstrap.min.js?ver=4.3.0' id='bootstrapScript-js'></script>
+<script type='text/javascript' src='http://amacon.com/wp-content/themes/amacon/js/jquery.bxslider.min.js?ver=1.0.0' id='bxslider-js'></script>
+<script type='text/javascript' src='http://amacon.com/wp-content/themes/amacon/js/lib/conditionizr-4.3.0.min.js?ver=4.3.0' id='conditionizr-js'></script>
+<script type='text/javascript' src='http://amacon.com/wp-content/themes/amacon/js/scripts.js?ver=1.0.0' id='html5blankscripts-js'></script>
+<script type='text/javascript' src='http://amacon.com/wp-content/themes/amacon/js/animate.js?ver=1.0.0' id='animate-js'></script>
+<script type='text/javascript' src='http://amacon.com/wp-content/themes/amacon/js/bootstrap-datetimepicker.min.js?ver=1.0.0' id='datePicker-js'></script>
+<script type='text/javascript' src='http://amacon.com/wp-content/themes/amacon/js/custom.js?ver=1.0.0' id='customScript-js'></script>
+<script type='text/javascript' src='https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js?ver=1.0.0' id='isotope-js'></script>
+<script type='text/javascript' src='http://amacon.com/wp-content/themes/amacon/js/jquery.flexslider.min.js?ver=1.0.0' id='flexSlider-js'></script>
+<script type='text/javascript' src='http://amacon.com/wp-content/themes/amacon/js/select2.js?ver=1.0.0' id='select2-js'></script>
+<script type='text/javascript' src='http://amacon.com/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.4.4' id='font-awesome-4-shim-js'></script>
+<script type='text/javascript' src='http://amacon.com/wp-content/themes/amacon/js/home_script.js?ver=1.0.0' id='homeScript-js'></script>
+<link rel="https://api.w.org/" href="http://amacon.com/wp-json/" /><link rel="alternate" type="application/json" href="http://amacon.com/wp-json/wp/v2/pages/29" /><link rel="alternate" type="application/json+oembed" href="http://amacon.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Famacon.com%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://amacon.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Famacon.com%2F&#038;format=xml" />
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//amacon.com/?wordfence_lh=1&hid=67DA0B76090DEE38C394F0B68FA63A40');
+</script>
+<!-- Facebook Pixel Code -->
+<script type='text/javascript'>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+</script>
+<!-- End Facebook Pixel Code -->
+<script type='text/javascript'>
+  fbq('init', '3281678991849826', {}, {
+    "agent": "wordpress-5.8.4-3.0.6"
+});
+</script><script type='text/javascript'>
+  fbq('track', 'PageView', []);
+</script>
+<!-- Facebook Pixel Code -->
+<noscript>
+<img height="1" width="1" style="display:none" alt="fbpx"
+src="https://www.facebook.com/tr?id=3281678991849826&ev=PageView&noscript=1" />
+</noscript>
+<!-- End Facebook Pixel Code -->
+		<style type="text/css" id="wp-custom-css">
+			.datepicker.datepicker_with_icon{
+	width: calc(100% - 30px) !important;
+}
+
+.customer_care_content form .select2-container {
+    height: 54px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b{
+	top: 90%;
+}
+
+
+.customer_care_content form input[type="checkbox"],
+.customer_care_content form input[type="radio"]{
+	height: auto;
+}
+
+.gfield_radio label,
+.gfield_checkbox label{
+	position: relative;
+	top: 2px;
+	margin-right: 5px;
+}
+.gsection.gf-hidden ~ li{
+	display: none !important;
+}
+
+li.non-visible{
+	display:none;
+}
+
+.form-warning-information{
+	color: #333;
+	background-color: #fff3cd;
+	border-color: #ffeeba;
+	position: relative;
+	padding: .75rem 1.25rem;
+	margin-bottom: 1rem;
+	border: 1px solid transparent;
+	border-radius: .25rem;
+	font-size: 16px;
+}
+.form-warning-information p{
+	text-align: left !important;
+	width: 100% !important;
+	padding: 0 !important;
+	margin-top: 0 !important;
+	border: 0 !important;
+}
+.ginput_container_list select{
+	width: 100%;
+	padding: 5px 4px;
+	height: 50px;
+}
+.comp-links-wrapper{
+	position: absolute;
+	top: 100%;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	transition: .6s;
+	opacity: 0;
+}
+.company-text{
+	transition: .6s;
+}
+.comp-links-wrapper a{
+	background-color: transparent;
+	font-size: 28px;
+	max-width: 210px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block !important;
+	color: #fff;
+	z-index: 100;
+	margin-bottom: 20px;
+	line-height: 1.2;
+}
+.man-links:after{
+	background: rgba(0, 0, 0, 0.4);
+	content: "";
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+}
+.comp-links-wrapper a:after{
+	display: none;
+}
+.man-links:hover .company-text{
+	top: 40%;
+}
+.man-links:hover .comp-links-wrapper{
+	top: 50%;
+	opacity: 1;
+}
+.man-links img{
+	transition: .3s;
+}
+.man-links:hover img{
+	transform: scale(1.2);
+}
+.cf-homeowner p{
+	width: 49% !important;
+	clear: none;
+	margin-top: 15px !important;
+	margin-left: 0 !important;
+	float: left;
+}
+.cf-homeowner p:last-child{
+	width: 100%!important;
+	padding: 0 !important;
+}
+.cf-homeowner{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.gform_wrapper .gform_footer input.button, .gform_wrapper .gform_footer input[type=submit]{
+	border: 0;
+	background: #e32846 !important;
+	color: #fff;
+	padding-left: 30px !important;
+	padding-right: 30px !important;
+}
+body #homeownner_request_form .ginput_container_list table.gfield_list tbody tr td.gfield_list_icons img{
+	background: green;
+	width: 18px !important;
+	height: 18px !important;
+	opacity: 1;
+}
+.add_list_item{
+	background: green;
+	display: inline-block;
+	line-height: 1;
+	padding: 3px;
+	border-radius: 3px;
+}
+.delete_list_item{
+	background: #e32846;
+	display: inline-block;
+	line-height: 1;
+	padding: 3px;
+	border-radius: 3px;
+}
+#field_1_8{
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+.gfield_list_container tr th:nth-child(4){
+	display: none;
+}
+.gfield_list_container tr td:nth-child(4){
+	display: none;
+}
+.warranty-not-dropdown h4{
+	color: #e32846;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+.warranty-not-dropdown .warranty-contant p{
+	font-size: 15px;
+	color: #878687;
+	margin-bottom: 20px;
+	line-height: 24px;
+}
+.warranty-wrapper-main{
+	padding-top: 40px;
+}
+.gform_wrapper ul.gfield_checkbox li label, .gform_wrapper ul.gfield_radio li label,
+.gform_wrapper table.gfield_list thead th,
+.gform_wrapper label.gfield_label, .gform_wrapper legend.gfield_label{
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 1.6em;
+	color: #656565;
+}
+.maps .location_address h3{
+	color: #656565;
+}
+.maps a{
+	color: #656565;
+}
+
+@media(max-width: 990px){
+	.man-links .comp-links-wrapper{
+		top: 50%;
+		opacity: 1;
+	}
+	.man-links .company-text{
+		top: 40%;
+	}
+}
+@media(max-width: 600px){
+	.cf-homeowner{
+		flex-direction: column;
+	}
+	.cf-homeowner p{
+		width: 100% !important;
+		margin-bottom: 0 !important;
+	}
+	
+	.gform_wrapper .gfield_list td.gfield_list_cell select{
+		width: calc(100% - 16px);
+    margin-left: 8px !important;
+    margin-right: 8px;
+	}
+}		</style>
+		
+
+	</head>
+    <body class="home page-template page-template-template-home page-template-template-home-php page page-id-29 elementor-default elementor-kit-2627 elementor-page elementor-page-29">
+
+		<!-- wrapper -->
+		<!-- <div class="wrapper">
+ -->
+		  <header>
+                <div class="navbar navbar-default navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="http://amacon.com"><img src="http://amacon.com/wp-content/themes/amacon/img/logo.png" alt="Amacon Logo" /></a>
+                        </div>
+
+                        <div class="navbar-collapse collapse">
+                            <div class="nav navbar-nav hvr-underline-from-center">
+                            	<ul><li id="menu-item-22" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-22"><a href="http://amacon.com/company/">Company</a>
+<ul class="sub-menu">
+	<li id="menu-item-2172" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2172"><a href="http://amacon.com/company/">About</a></li>
+	<li id="menu-item-21" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a href="http://amacon.com/community/">Community</a></li>
+	<li id="menu-item-2600" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2600"><a href="http://amacon.com/company/arts-culture/">Arts &#038; Culture</a></li>
+	<li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="http://amacon.com/community/blog/">News</a></li>
+</ul>
+</li>
+<li id="menu-item-25" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-25"><a href="http://amacon.com/portfolio/">Portfolio</a>
+<ul class="sub-menu">
+	<li id="menu-item-2173" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2173"><a href="http://amacon.com/portfolio/">Residential</a></li>
+	<li id="menu-item-27" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27"><a href="http://amacon.com/commercial/">Commercial</a></li>
+	<li id="menu-item-1666" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1666"><a href="http://amacon.com/rental-apartments/">Rental Apartments</a></li>
+</ul>
+</li>
+<li id="menu-item-26" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26"><a href="http://amacon.com/hospitality/">Hospitality</a></li>
+<li id="menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a href="http://amacon.com/customer-care/">Customer Care</a></li>
+<li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-23"><a href="http://amacon.com/contact/">Contact</a>
+<ul class="sub-menu">
+	<li id="menu-item-1674" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1674"><a href="http://amacon.com/contact/careers/">Careers</a></li>
+</ul>
+</li>
+</ul>                            </div>
+						</div>
+
+
+					</div>
+
+                </div>
+
+
+             </header>
+			<!-- /header -->
+
+<section id="slider_content">
+        <ul class="bxslider">
+                            <li>
+                                         <div class="img banner_images_background"
+                          style="background: url('http://amacon.com/wp-content/uploads/2021/08/2020-Amacon-Grid-scaled.jpg') no-repeat; center center ;background-size: cover; background-position: center center"></div>
+                     <div class="banner_container"></div>
+                                                              </li>
+                            <li>
+                                         <div class="img banner_images_background"
+                          style="background: url('http://amacon.com/wp-content/uploads/2022/05/Screen-Shot-2022-03-30-at-2.20.24-PM.png') no-repeat; center center ;background-size: cover; background-position: center center"></div>
+                     <div class="banner_container"></div>
+                                                                       <div class="slide-desc bxslider-caption">
+                            <div class="caption_section col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <a href="https://www.thegrantcondos.com/" target="_blank">
+                                    <img  src="http://amacon.com/wp-content/uploads/2022/05/grant-whiteAsset-7@0.75x.png" class="img-responsive" alt="Home">
+                                </a>
+                            </div>
+                            <div class="caption_section col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <a href="https://www.thegrantcondos.com/" target="_blank">
+                                    <span>COMING SOON</span>
+                                </a>
+                            </div>
+                        </div>
+                                    </li>
+                            <li>
+                                         <div class="img banner_images_background"
+                          style="background: url('http://amacon.com/wp-content/uploads/2021/05/NORM-LI_210430_EXT_Vignette_VF_01-VBEDIT-DarkBackground-scaled.jpg') no-repeat; left top ;background-size: cover; background-position: left top"></div>
+                     <div class="banner_container"></div>
+                                                                       <div class="slide-desc bxslider-caption">
+                            <div class="caption_section col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <a href="http://www.lifeatparkside.com/" target="_blank">
+                                    <img  src="http://amacon.com/wp-content/uploads/2021/05/voya-logo-700x200.png" class="img-responsive" alt="Home">
+                                </a>
+                            </div>
+                            <div class="caption_section col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <a href="http://www.lifeatparkside.com/" target="_blank">
+                                    <span>Now Selling</span>
+                                </a>
+                            </div>
+                        </div>
+                                    </li>
+                            <li>
+                                         <div class="img banner_images_background"
+                          style="background: url('http://amacon.com/wp-content/uploads/2021/05/vue.jpg') no-repeat; left top ;background-size: cover; background-position: left top"></div>
+                     <div class="banner_container"></div>
+                                                                       <div class="slide-desc bxslider-caption">
+                            <div class="caption_section col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <a href="https://amacon.com/vue/" target="_blank">
+                                    <img  src="http://amacon.com/wp-content/uploads/2021/05/vue-logo-700x729.jpg" class="img-responsive" alt="Home">
+                                </a>
+                            </div>
+                            <div class="caption_section col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <a href="https://amacon.com/vue/" target="_blank">
+                                    <span>Now Selling</span>
+                                </a>
+                            </div>
+                        </div>
+                                    </li>
+                            <li>
+                                         <div class="img banner_images_background"
+                          style="background: url('http://amacon.com/wp-content/uploads/2021/05/block.jpg') no-repeat; left top ;background-size: cover; background-position: left top"></div>
+                     <div class="banner_container"></div>
+                                                                       <div class="slide-desc bxslider-caption">
+                            <div class="caption_section col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <a href="https://www.amacon.com/block/" target="_blank">
+                                    <img  src="http://amacon.com/wp-content/uploads/2021/05/block-logo.jpg" class="img-responsive" alt="Home">
+                                </a>
+                            </div>
+                            <div class="caption_section col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <a href="https://www.amacon.com/block/" target="_blank">
+                                    <span>Now Selling</span>
+                                </a>
+                            </div>
+                        </div>
+                                    </li>
+                            <li>
+                                         <div class="img banner_images_background"
+                          style="background: url('http://amacon.com/wp-content/uploads/2021/02/NORM-LI_210105_EXT_TOWNHOME_VF_Update_01_OpenGate-final-scaled.jpg') no-repeat; left top ;background-size: cover; background-position: left top"></div>
+                     <div class="banner_container"></div>
+                                                                       <div class="slide-desc bxslider-caption">
+                            <div class="caption_section col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <a href="https://amacon.com/mckenziemews/" target="_blank">
+                                    <img  src="http://amacon.com/wp-content/uploads/2021/02/McKenzie_Mews_logo_BlackBlue-700x510.png" class="img-responsive" alt="Home">
+                                </a>
+                            </div>
+                            <div class="caption_section col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <a href="https://amacon.com/mckenziemews/" target="_blank">
+                                    <span>SOLD OUT</span>
+                                </a>
+                            </div>
+                        </div>
+                                    </li>
+                            <li>
+                                         <div class="img banner_images_background"
+                          style="background: url('http://amacon.com/wp-content/uploads/2020/10/2s8SdHKg-scaled.jpeg') no-repeat; center center ;background-size: cover; background-position: center center"></div>
+                     <div class="banner_container"></div>
+                                                                       <div class="slide-desc bxslider-caption">
+                            <div class="caption_section col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <a href="https://amacon.com/alaska/" target="_blank">
+                                    <img  src="http://amacon.com/wp-content/uploads/2020/10/Alaska_Logo_Sept2020_Blk-700x334.jpg" class="img-responsive" alt="Home">
+                                </a>
+                            </div>
+                            <div class="caption_section col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <a href="https://amacon.com/alaska/" target="_blank">
+                                    <span>Now Selling</span>
+                                </a>
+                            </div>
+                        </div>
+                                    </li>
+                            <li>
+                                         <div class="img banner_images_background"
+                          style="background: url('http://amacon.com/wp-content/uploads/2019/08/Ridgewood-Courtyard-19.jpg') no-repeat; center center ;background-size: cover; background-position: center center"></div>
+                     <div class="banner_container"></div>
+                                                                       <div class="slide-desc bxslider-caption">
+                            <div class="caption_section col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <a href="http://ridgewoodplace.ca/" target="_blank">
+                                    <img  src="http://amacon.com/wp-content/uploads/2019/08/Screen-Shot-2019-08-11-at-10.42.48-PM-700x262.png" class="img-responsive" alt="Home">
+                                </a>
+                            </div>
+                            <div class="caption_section col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <a href="http://ridgewoodplace.ca/" target="_blank">
+                                    <span>Now Renting | Move in now</span>
+                                </a>
+                            </div>
+                        </div>
+                                    </li>
+                  </ul>
+    <div class="outside">
+      <p><span id="slider-prev"></span><span id="slider-next"></span></p>
+    </div>
+    <a href="#FeaturedDevelopments" class="arrow_down" ><img src="http://amacon.com/wp-content/themes/amacon/img/angle_down.png" alt="Arrow down button to scroll to the bottom of page"/></a>
+</section>
+
+
+
+<section class="inner-headline">
+    <div class="container" id="FeaturedDevelopments">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 centered white">
+                <h2 class="pageTitle">FEATURED DEVELOPMENTS</h2>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="content">
+    <div class="container featured_dev_content">
+        <div class="row featured-v1 margin-bottom-40">
+                       <div class="col-md-4 col-sm-4 col-xs-12 md-margin-bottom-40">
+                <div class="content-block">
+                       
+                        <img class="img-responsive" src="http://amacon.com/wp-content/uploads/2022/02/NORM-LI_210430_EXT_Vignette_VF_01-VBEDIT-DarkBackground-1.jpg " alt="Home">
+                   
+                    <h2><a href="https://www.lifeatparkside.com/" target="_blank">VOYA</a></h2>
+                    <div class="container_footer_information">
+                        <p class="desc">MISSISSAUGA, ON</p>
+                        <a href="https://www.lifeatparkside.com/" target="_blank" role="button" class="home_visit_link links">Visit Website</a>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12 md-margin-bottom-40">
+                <div class="content-block">
+                       
+                        <img class="img-responsive" src="http://amacon.com/wp-content/uploads/2021/08/vue-1.jpg " alt="Home">
+                   
+                    <h2><a href="http://vueliving.ca/" target="_blank">VUE</a></h2>
+                    <div class="container_footer_information">
+                        <p class="desc">WEST COQUITLAM, BC</p>
+                        <a href="http://vueliving.ca/" target="_blank" role="button" class="home_visit_link links">Visit Website</a>
+                    </div>
+                </div>
+            </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12 md-margin-bottom-40">
+                <div class="content-block">
+                       
+                        <img class="img-responsive" src="http://amacon.com/wp-content/uploads/2021/08/block-ext.jpg " alt="Home">
+                   
+                    <h2><a href="http://amacon.com/block/" target="_blank">BLOCK RESIDENCES</a></h2>
+                    <div class="container_footer_information">
+                        <p class="desc">VANCOUVER, BC</p>
+                        <a href="http://amacon.com/block/" target="_blank" role="button" class="home_visit_link links">Visit Website</a>
+                    </div>
+                </div>
+            </div>
+                    </div>
+    </div>
+</section>
+<!-- End Service Blcoks -->
+
+<section class="inner-headline" >
+    <div class="container" id="news">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 centered white">
+                   <h2 class="pageTitle">IN THE NEWS</h2>
+            </div>
+        </div>
+    </div>
+</section>  
+<section class="content">
+    <div class="container">
+        <!-- Service Blcoks -->
+        <div class="row service-v1 margin-bottom-40">
+      
+                                        <div class="home_posts col-md-4 col-sm-4 col-xs-12 ">
+                    <div class="recent_post_home">
+                        <div class="recent_post_home_img_container">
+                            <img src="http://amacon.com/wp-content/uploads/2022/02/Screen-Shot-2022-02-08-at-11.00.02-AM.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="http://amacon.com/wp-content/uploads/2022/02/Screen-Shot-2022-02-08-at-11.00.02-AM.png 1682w, http://amacon.com/wp-content/uploads/2022/02/Screen-Shot-2022-02-08-at-11.00.02-AM-250x161.png 250w, http://amacon.com/wp-content/uploads/2022/02/Screen-Shot-2022-02-08-at-11.00.02-AM-700x451.png 700w, http://amacon.com/wp-content/uploads/2022/02/Screen-Shot-2022-02-08-at-11.00.02-AM-768x495.png 768w, http://amacon.com/wp-content/uploads/2022/02/Screen-Shot-2022-02-08-at-11.00.02-AM-1536x990.png 1536w, http://amacon.com/wp-content/uploads/2022/02/Screen-Shot-2022-02-08-at-11.00.02-AM-120x77.png 120w" sizes="(max-width: 1682px) 100vw, 1682px" />                        </div>
+                        <div class="recent_post_home_text_container">
+                            <h2><a href="http://amacon.com/voya-is-coming-spring-2022/">Voya is Coming Spring 2022</a></h2>
+                            <p class="datetime">Feb 08, 2022</p>
+                            <p class="desc">The wait is finally over! The next phase of Voya is coming to Parkside Village in Downtow...</p>
+                            <a href="http://amacon.com/voya-is-coming-spring-2022/" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="home_posts col-md-4 col-sm-4 col-xs-12 ">
+                    <div class="recent_post_home">
+                        <div class="recent_post_home_img_container">
+                            <img src="http://amacon.com/wp-content/uploads/2022/02/Block-New-Year-Eblast-Headers-1.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="http://amacon.com/wp-content/uploads/2022/02/Block-New-Year-Eblast-Headers-1.png 1200w, http://amacon.com/wp-content/uploads/2022/02/Block-New-Year-Eblast-Headers-1-250x125.png 250w, http://amacon.com/wp-content/uploads/2022/02/Block-New-Year-Eblast-Headers-1-700x350.png 700w, http://amacon.com/wp-content/uploads/2022/02/Block-New-Year-Eblast-Headers-1-768x384.png 768w, http://amacon.com/wp-content/uploads/2022/02/Block-New-Year-Eblast-Headers-1-120x60.png 120w" sizes="(max-width: 1200px) 100vw, 1200px" />                        </div>
+                        <div class="recent_post_home_text_container">
+                            <h2><a href="http://amacon.com/lunar-new-year-at-vue-and-the-block-residences/">Lunar New Year at Vue and the Block Residences</a></h2>
+                            <p class="datetime">Feb 08, 2022</p>
+                            <p class="desc">Celebrate Lunar New Year with Block Residences and Vue!&n...</p>
+                            <a href="http://amacon.com/lunar-new-year-at-vue-and-the-block-residences/" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                            <div class="home_posts col-md-4 col-sm-4 col-xs-12 ">
+                    <div class="recent_post_home">
+                        <div class="recent_post_home_img_container">
+                            <img src="http://amacon.com/wp-content/uploads/2022/01/Screen-Shot-2022-02-08-at-11.01.42-AM.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="http://amacon.com/wp-content/uploads/2022/01/Screen-Shot-2022-02-08-at-11.01.42-AM.png 1270w, http://amacon.com/wp-content/uploads/2022/01/Screen-Shot-2022-02-08-at-11.01.42-AM-250x168.png 250w, http://amacon.com/wp-content/uploads/2022/01/Screen-Shot-2022-02-08-at-11.01.42-AM-700x470.png 700w, http://amacon.com/wp-content/uploads/2022/01/Screen-Shot-2022-02-08-at-11.01.42-AM-768x515.png 768w, http://amacon.com/wp-content/uploads/2022/01/Screen-Shot-2022-02-08-at-11.01.42-AM-120x81.png 120w" sizes="(max-width: 1270px) 100vw, 1270px" />                        </div>
+                        <div class="recent_post_home_text_container">
+                            <h2><a href="http://amacon.com/featured-realtor-at-block-residences-catherine-song/">Featured Realtor at Block Residences: Catherine Song</a></h2>
+                            <p class="datetime">Jan 20, 2022</p>
+                            <p class="desc">At Amacon we take a lot of pride in our realtor communities. Today we’d like to celebra...</p>
+                            <a href="http://amacon.com/featured-realtor-at-block-residences-catherine-song/" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+               
+        </div>
+    </div>
+</section>
+
+<section class="background_grey">
+</section>
+
+			<!-- footer -->
+
+	<footer>
+		<div class="container">
+			<div class="col-lg-12 col-md-12 rows">
+
+
+				<div class="col-sm-3 col-lg-3 col-md-3 rows centered">
+					<h3>Vancouver</h3>
+
+					<p>Suite 500 - 856 Homer Street</p>
+					<p>Vancouver, BC <span class="p_code">V6B 2W5</span></p>
+					<p>t: 604.602.7700</p>
+				</div>
+				<div class="col-sm-3 col-lg-3 col-md-3 rows centered">
+					<h3>Toronto</h3>
+
+					<p>Suite 601 - 1 Yonge Street</p>
+					<p>Toronto, ON <span class="p_code">M5E 1E5</span></p>
+					<p>t: 416.369.9069</p>
+				</div>
+				<div class="col-sm-3 col-lg-3 col-md-3 rows centered">
+					<h3>ST ALBERT</h3>
+
+					<p>Suite 201 – 1 Tache Street</p>
+					<p>St. Albert, AB <span class="p_code">T8N 1B4</span></p>
+					<p>t: 587.805.5111</p>
+				</div>
+				<div class="col-sm-3 col-lg-3 col-md-3 rows centered">
+					<h3>DENVER</h3>
+
+					<p>Suite 300 – 800 18th Street</p>
+					<p>Denver, Colorado <span class="p_code">80202</span></p>
+					<p>t: 303.291.1337</p>
+				</div>
+
+
+			</div>
+		</div>
+	</footer>
+	<footer class="footer-bottom">
+		<div class="container">
+			<div class="col-sm-12 col-lg-12 col-md-12 rows centered">
+				<h3>Follow Us</h3>
+
+				<div class="social-links">
+					<ul>
+						<!-- <li><a href="https://twitter.com/AmaconLiveWell" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li><a href="https://www.facebook.com/amaconliveworkwell" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li><a href="http://instagram.com/amaconlivewell" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li> -->
+						<li><a href="https://twitter.com/AmaconLiveWell" target="_blank"><img src="http://amacon.com/wp-content/themes/amacon/img/twitter.svg" alt="Twitter Icon" /></a></li>
+						<li><a href="https://www.facebook.com/amaconliveworkwell" target="_blank"><img src="http://amacon.com/wp-content/themes/amacon/img/facebook.svg" alt="Facebook Icon"/></a></li>
+						<li><a href="http://instagram.com/amaconlivewell" target="_blank"><img src="http://amacon.com/wp-content/themes/amacon/img/instagram.svg" alt="Instagram Icon"/></a></li>
+
+					</ul>
+                      <p class="copyright">Copyright © 2017</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+<a href="#" class="scrollup"><i class="fa fa-angle-up active" aria-hidden="true"></i></a>
+
+
+
+
+
+
+
+<!-- javascript
+    ================================================== -->
+
+
+		    <!-- Facebook Pixel Event Code -->
+    <script type='text/javascript'>
+        document.addEventListener( 'wpcf7mailsent', function( event ) {
+        if( "fb_pxl_code" in event.detail.apiResponse){
+          eval(event.detail.apiResponse.fb_pxl_code);
+        }
+      }, false );
     </script>
-</body>
+    <!-- End Facebook Pixel Event Code -->
+    <div id='fb-pxl-ajax-code'></div><script type='text/javascript' src='http://amacon.com/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.7' id='regenerator-runtime-js'></script>
+<script type='text/javascript' src='http://amacon.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0' id='wp-polyfill-js'></script>
+<script type='text/javascript' id='contact-form-7-js-extra'>
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"http:\/\/amacon.com\/wp-json\/","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://amacon.com/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.4.2' id='contact-form-7-js'></script>
+<script type='text/javascript' src='http://amacon.com/wp-includes/js/wp-embed.min.js?ver=5.8.4' id='wp-embed-js'></script>
+<script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?v=3.exp&#038;libraries=places&#038;key=AIzaSyCNiiVwEQqK5m0W8PFBkt-Wk0rIBfiUCek&#038;ver=5.8.4' id='google-maps-api-fe-js'></script>
 
+		<!-- analytics -->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-93567942-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+		<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script> -->
+<!-- 		<script>
+        // conditionizr.com
+        // configure environment tests
+        conditionizr.config({
+            assets: '',
+            tests: {}
+        });
+        </script> -->
+
+	<script type="text/javascript">
+	gform.addAction( 'gform_input_change', function( elem, formId, fieldId ) {
+		if (fieldId == 1 && formId == 1) {
+			var fieldDateTime = new Date(jQuery(elem).val())
+			fieldDateTime.setDate(fieldDateTime.getDate() + 5)
+			var currentDateTime = new Date().getTime()
+			if (jQuery(elem).val() != "") {
+				jQuery('.gsection.gf-hidden').removeClass('gf-hidden')
+				if (fieldDateTime.getTime() <= currentDateTime) {
+					jQuery('.service-request').removeClass('non-visible')
+					jQuery('.grace-days').addClass('non-visible')
+					jQuery('#input_1_16').val('Service Request')
+				}else{
+					jQuery('.grace-days').removeClass('non-visible')
+					jQuery('.service-request').addClass('non-visible')
+					jQuery('#input_1_16').val('5 Days Inspection Request')
+				}
+			}
+			console.log(fieldDateTime);
+		}
+	}, 10, 3 );
+	</script>
+
+	</body>
 </html>
